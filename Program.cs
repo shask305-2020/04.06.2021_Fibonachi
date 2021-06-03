@@ -15,11 +15,17 @@ namespace _04._06._2021
                 Console.Write("Введите количество чисел ряда Фибоначчи: ");
                 int n = Convert.ToInt32(Console.ReadLine());
                 int[] fib = new int[n];
-                for (int i = 0; i < n + 1; i++)
+                for (int i = 0; i < n; i++)
                 {
-
+                    fib[i] = Fib(i + 1);
                 }
-                Console.WriteLine(Fib(n));
+
+                Console.WriteLine("Элементы последовательности Фибоначчи:");
+                foreach (int i in fib)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.WriteLine("\n");
             }
         }
 
